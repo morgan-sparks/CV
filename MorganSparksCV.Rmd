@@ -42,7 +42,7 @@ tribble(
   2024, NA, "\\textbf{Research Fish Biologist}, Rocky Mountain Research Station, USDA Forest Service",
   2023, 2024, "\\textbf{Postdoctoral Fellow}, National Science Foundation (Colorado State University)",
   2017, 2023, "\\textbf{Research Assistant}, Department of Biology, Purdue University",
-  2014, 2016, "\\textbf{Research Assistant}, College of Fisheries and Ocean Science and USGS Alasko Cooperative Fish and Widlife Research Unit, University of Alaska Fairbanks"
+  2014, 2016, "\\textbf{Research Assistant}, USGS Alasko Cooperative Fish and Widlife Research Unit, University of Alaska Fairbanks"
   ) |>
   arrange(-Start) |>
   mutate(
@@ -64,9 +64,10 @@ tribble(
 ```{r degrees, results='asis'}
 tribble(
   ~ Year, ~ Degree, ~ Feild, ~ Institution,
-  2020, "Ph.D.", "Ecology", "University of Wyoming",  
-  2015, "M.Sc.", "Conservation Biology", "University of Alberta", 
-  2011, "B.S.", "Conservation Biology \\textit{cum laude}", "SUNY: College of Environmental Science and Forestry",
+  2023, "Ph.D.", "Biology", "Purude University",  
+  2016, "M.Sc.", "Fisheries", "University of Alaska Fairbanks", 
+  2013, "B.S.", "Wildlife Biology (Aquatic) \\textit{High Honors}", "University of Montana",
+  2013, "B.A.", "Journalism (Print) \\textit{High Honors}", "University of Montana"
   ) |> 
   baretable()
 ```
