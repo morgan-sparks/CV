@@ -1,6 +1,6 @@
 # Google scholar stats
 get_gcites <- function(date) {
-  "https://scholar.google.com/citations?user=tGn-FzAAAAAJ&hl=en" |>
+  "https://scholar.google.com/citations?user=sMTXf4QAAAAJ&hl=en" |>
     gcite::gcite_url() |>
     gcite::gcite_citation_index()
 }
@@ -13,7 +13,7 @@ get_scholar_cites <- function(date) {
   while (!complete) {
     k <- length(gspapers)
     gspapers[[k + 1]] <- gcite::gcite_url(
-      url = "https://scholar.google.com/citations?user=tGn-FzAAAAAJ&hl=en",
+      url = "https://scholar.google.com/citations?user=sMTXf4QAAAAJ&hl=en",
       cstart = k * 100,
       pagesize = 100
     ) |>

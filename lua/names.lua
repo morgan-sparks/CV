@@ -10,27 +10,27 @@ function Block(el)
     if el.t == "Para" or el.t == "Plain" then
         for k, _ in ipairs(el.content) do
 
-            -- Original functionality: Make "Maitland, B.M." bold in citations
-            if el.content[k].t == "Str" and el.content[k].text == "Maitland," and
+            -- Original functionality: Make "Sparks, M.M." bold in citations
+            if el.content[k].t == "Str" and el.content[k].text == "Sparks," and
                 el.content[k + 1].t == "Space" and el.content[k + 2].t == "Str" and
-                el.content[k + 2].text:find("^B.M.") then
+                el.content[k + 2].text:find("^M.M.") then
 
-                el.content[k] = pandoc.Strong {pandoc.Str("Maitland, B.M.")}
-                -- add comma and space after Maitland, B.M.
+                el.content[k] = pandoc.Strong {pandoc.Str("Sparks, M.M.")}
+                -- add comma and space after Sparks, M.M.
                 el.content[k + 1] = pandoc.Str(", ")
                 table.remove(el.content, k + 2)
 
             -- For shared authorships: Make "Zhang*," bold in citations
-            elseif el.content[k].t == "Str" and el.content[k].text == "Maitland*," and
+            elseif el.content[k].t == "Str" and el.content[k].text == "Sparks*," and
                 el.content[k + 1].t == "Space" and el.content[k + 2].t == "Str" and
-                el.content[k + 2].text:find("^B.M.") then
+                el.content[k + 2].text:find("^M.M.") then
 
-                el.content[k] = pandoc.Strong {pandoc.Str("Maitland*, B.M.")}
-                -- add comma and space after Maitland, B.M.
+                el.content[k] = pandoc.Strong {pandoc.Str("Sparks*, M.M.")}
+                -- add comma and space after Sparks, M.M.
                 el.content[k + 1] = pandoc.Str(", ")
                 table.remove(el.content, k + 2)
 
-            -- New functionality: Underline mentee names (following same pattern as Maitland, B.M.)
+            -- New functionality: Underline mentee names (following same pattern as Sparks, M.M.)
             elseif el.content[k].t == "Str" then
                 for _, mentee in ipairs(mentee_names) do
                     if el.content[k].text == mentee.last .. "," and
