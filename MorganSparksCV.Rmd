@@ -114,12 +114,6 @@ bibliography_entries("bibs/pkgs.bib")
 
 \refstepcounter{bib}\label{packageend}
 
-# Technical reports
-
-```{r techreports}
-bibliography_entries("bibs/tech_reports.bib") |> 
-  arrange(issued, desc(author$family))
-```
 
 # Theses
 
