@@ -135,8 +135,9 @@
 #   ReadBib(file, check = FALSE)
 # }
 
-bmm_pkgs <- pkgmeta::get_github_repos(
-  cran_packages = c("hatchR"),
-  github_repos = c("bmait101/hatchR"),
-  include_downloads = TRUE, start = "2025-01-01"
-)
+hatchR_cites <- cranlogs::cran_downloads(packages = c("hatchR"), from = "2025-01-01", to = Sys.Date()) |>
+  summarise(citations = sum(count))
+
+
+
+

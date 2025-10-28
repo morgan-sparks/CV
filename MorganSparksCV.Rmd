@@ -88,7 +88,7 @@ n_talks <- RefManageR::ReadBib("bibs/conf_presentations.bib", check = FALSE) |>
 * **Research Interests**: Fisheries ecology and conservation; freshwater ecosystem responses to climate change and land use change; aquatic habitat connectivity; stable isotope ecology; ecological statistics and programming. 
 * Since 2014 I have authored `r n_pubs` papers in peer-reviewed journals on fisheries and conservation (pages \pageref{papersstart}--\pageref{papersend}).
 * On Google Scholar my h-index is `r bmm_cite$All[2]` with `r prettyNum(bmm_cite$All[1], big.mark=",")` total citations (as of `r format(Sys.time(), "%e %B %Y")`).
-* I have authored `r NROW(bmm_pkgs)` R package as a result of my research with a total of `r round(sum(bmm_pkgs$downloads, na.rm=TRUE))` downloads (page \pageref{packagestart}).
+* I have authored `r nrow(hatchR_cites)` R package with a total of `r hatchR_cites$citations` downloads (page \pageref{packagestart}).
 * I have contributed `r n_talks` papers and posters at AFS, SFS, ASLO, AGU, IAGLR, and regional chapter meetings (pages \pageref{presstart}--\pageref{presend}).
 
 \refstepcounter{bib}\label{papersstart}
