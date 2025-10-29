@@ -70,9 +70,10 @@ tribble(
   baretable()
 ```
 
-# Research
 
 ```{r article-counts}
+
+### not using
 n_pubs <- RefManageR::ReadBib("bibs/journal_articles.bib", check = FALSE) |> 
   as_tibble() |> 
   filter(bibtype == "Article") |> 
@@ -162,7 +163,7 @@ grants |>
 
 \vspace*{0.2cm}\enlargethispage*{0.5cm}
 
-**Below are invited full proposals that were invited but withdrawn due to federal funding issue:** \vspace*{0.2cm}\enlargethispage*{0.5cm}
+**Below are invited full proposals that were invited but withdrawn due to federal funding issues:** \vspace*{0.2cm}\enlargethispage*{0.5cm}
 
 ```{r grantstable-withdrawn, results='asis'}
 grants |>
