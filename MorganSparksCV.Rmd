@@ -4,9 +4,7 @@ position: ""
 address: "Rocky Mountain Research Station,\\tabularnewline USDA Forest Service, Boise, ID, USA"
 email: "msparks1309@gmail.com"
 orcid: 0000-0003-0787-2218
-# linkedin: bryanmaitland
 github: morgan-sparks
-# researchgate: bryan-maitland
 date: "`r format(Sys.time(), '%B %Y')`"
 csl: "csl/apa_cv.csl"
 output: 
@@ -245,7 +243,6 @@ grants |>
 tribble(
   ~Year, ~Award,
   2024, "Outstanding Service Award, U.S. Forest Service, Rocky Mountain Research Station",
-  2021, "Best Professional Presentation Award, Wisconsin Chapter American Fisheries Society",
   ) |>
   baretable()
 ```
@@ -254,8 +251,11 @@ tribble(
 
 ```{r award2, results='asis'}
 tribble(
-  ~Year, ~Award,
-  2024, "Wisconsin Water Resources Postdoctoral Fellow, University of Wisconsin-Madison",
+  ~Year, ~Award, ~Support,
+  2022, "Bisland Dissertation Fellowship, Purdue University", "One semester full support",
+  2021, "Waser Fellowship, Purdue University Department of Biological Sciences", "6 months full support",
+  2020, "Purdue Research Foundation Graduate Fellowship", "One year full support",
+  2017, "Andrews Fellowship, Purdue University Department of Biological Sciences", "Two years full support"
   ) |>
   baretable()
 ```
@@ -264,17 +264,14 @@ tribble(
 
 ```{r award3, results='asis'}
 tribble(
-  ~Year, ~Award,
-  2019, "Dean’s Graduate Scholar Award, College of Arts and Sciences University of Wyoming",
-  2018, "Eugene Maughan Graduate Award, Western Division American Fisheries Society",
-  2018, "Hank Gardner Graduate Award, Department of Zoology and Physiology University of Wyoming",
-  2017, "Clemens-Rigler Award, Canadian Aquatic Resources Section American Fisheries Society",
-  2017, "Board of Visitors Award, College of Arts and Sciences University of Wyoming",
-  2017, "Dennis Anderson Fisheries Award, Department Zoology and Physiology University of Wyoming ",
-  2017, "William Trachtenberg Scholarship, Sustainable Fisheries Foundation",
-  2017, "Vern Bressler Fisheries Award, Department of Zoology and Physiology University of Wyoming",
-  2015, "Excellence in Fisheries Award, Canadian Aquatic Resources Section American Fisheries Society",
-  2015, "Clemens-Rigler Award, Canadian Aquatic Resources Section American Fisheries Society"
+  ~Year, ~Award, ~Group,
+  2017, "Best Student Presentation", "Indiana Chapter American Fisheries Society",
+  2013, "Mortar Board Outstanding Senior Award", "Wildlife Biology, University of Montana",
+  2013, "3rd place Student Feature Writing", "Society of Professional Journalists, Region 10",
+  2012, "Student Speaker and Representative", "University of Montana Wildlife Biology 75th Anniversary",
+  2012, "Wally McClure Scholarship", "Montana Chapter American Fisheries Society",
+  2010, "Montana Druids Honors Society", "Wildlife Biology, University of Montana",
+  2009, "Western Undergraduate Exchange Scholarship", "University of Montana"
   ) |>
   baretable()
 ```
