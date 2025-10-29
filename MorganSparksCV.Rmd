@@ -46,7 +46,7 @@ tribble(
   mutate(
     Start = as.character(Start),
     End = as.character(End),
-    End = tidyr::replace_na(End, ""),
+    End = tidyr::replace_na(End, "Present"),
     Years = if_else(End == Start,
       as.character(Start),
       paste(Start, "--", End, sep = ""),
@@ -69,7 +69,6 @@ tribble(
   ) |> 
   baretable()
 ```
-
 
 ```{r article-counts}
 
@@ -95,7 +94,7 @@ bibliography_entries("bibs/journal_articles.bib") |>
 
 # R-packages
 
-**hatchR has a total of `r hatchR_cites$citations` downloads.**
+**hatchR has a total of `r hatchR_cites$citations` downloads (as of `r format(Sys.time(), "%e %B %Y")`).**
 
 ```{r software}
 bibliography_entries("bibs/pkgs.bib")
@@ -132,7 +131,9 @@ sumgrants <- grants |>
   sum(na.rm = TRUE)
 ```
 
-**I have acquired *`r scales::dollar_format()(sumgrants)`* in research grants (showing grants \>\$5,000):** \vspace*{0.2cm}\enlargethispage*{0.5cm}
+**I have acquired *`r scales::dollar_format()(sumgrants)`* in research grants (showing grants \>\$4999):** 
+
+<!-- \vspace\*{0.2cm}\\enlargethispage\*{0.5cm} -->
 
 ```{r grants-table, results='asis'}
 grants |>
@@ -161,9 +162,11 @@ grants |>
   )
 ```
 
-\vspace*{0.2cm}\enlargethispage*{0.5cm}
+<!-- \vspace\*{0.2cm}\\enlargethispage\*{0.5cm} -->
 
-**Below are invited full proposals that were invited but withdrawn due to federal funding issues:** \vspace*{0.2cm}\enlargethispage*{0.5cm}
+**Below are invited full proposals that were invited but withdrawn due to federal funding issues:** 
+
+<!-- \vspace\*{0.2cm}\\enlargethispage\*{0.5cm} -->
 
 ```{r grantstable-withdrawn, results='asis'}
 grants |>
@@ -191,9 +194,11 @@ grants |>
   )
 ```
 
-\vspace*{0.2cm}\enlargethispage*{0.5cm}
+<!-- \vspace\*{0.2cm}\\enlargethispage\*{0.5cm} -->
 
-**Below are invited full proposals that were not awarded:** \vspace*{0.2cm}\enlargethispage*{0.5cm}
+**Below are invited full proposals that were not awarded:**
+
+<!-- \vspace\*{0.2cm}\\enlargethispage\*{0.5cm} -->
 
 ```{r grantstable-invite, results='asis'}
 grants |>
@@ -221,7 +226,7 @@ grants |>
   )
 ```
 
-\vspace*{0.2cm}\enlargethispage*{0.5cm}
+<!-- \vspace\*{0.2cm}\\enlargethispage\*{0.5cm} -->
 
 # Honors and Awards
 
@@ -266,7 +271,7 @@ tribble(
 
 # Invited Academic Talks
 
-I have contributed `r n_talks` papers and posters at AFS, SFS, ASLO, AGU, IAGLR, and regional chapter meetings (pages \pageref{presstart}--\pageref{presend}).
+<!-- I have contributed `r n_talks` papers and posters at AFS, SFS, ASLO, AGU, IAGLR, and regional chapter meetings (pages \pageref{presstart}--\pageref{presend}). -->
 
 ```{r talks, results='asis'}
 talks <- readr::read_csv("invited_talks.csv")
@@ -293,27 +298,18 @@ talks |>
 
 # Teaching
 
-## University of Wyoming
-
--   ZOO 4330: Ichthyology, Instructor of Record
-    -   Spring 2020: 3 credits, 22 students
--   Zoo 4330: Ichthyology, Teaching Assistant, Lab Instructor
-    -   Spring 2019: 3 credits, 20 students
-    -   Spring 2018: 3 credits, 25 students
-    -   Spring 2017: 3 credits, 19 students
-    -   Spring 2016: 3 credits, 18 students
--   ZOO 4310: Fisheries Management, Teaching Assistant, Lab Instructor
-    -   Fall 2019: 3 credits, 21 students
-    -   Fall 2018: 3 credits, 26 students
-    -   Fall 2017: 3 credits, 23 students
-    -   Fall 2016: 3 credits, 19 students
-    -   Fall 2015: 3 credits, 23 students
-
-## University of Alberta
-
--   RENR 376: Fisheries and Wildlife Management, Teaching Assistant, Lab Instructor
-    -   Spring 2015: 3 credits, 27 students
-    -   Spring 2014: 3 credits, 29 students
+## Teaching Assistantships
+```{r teaching, results='asis'}
+purdue <- tribble(
+  ~ Year, ~ Course, ~ Role, ~ Credits, ~ Institution,
+  2023, "BIOL 69500: Data Science for Biologists", "TA",  "3 credits", "Purdue University",
+  2022, "BIOL 5800: Evolution", "TA", "3 credits","Purdue University",
+  2019, "BIOL 19500: CURE Disease Ecology Lab", "TA", "5 credits","Purdue University",
+  2018, "BIOL 58210: Ecological Statistics ", "TA", "3 credits", "Purdue University",
+  2015, "FISH 427: Ichthyology", "TA",  "5 credits", "University of Alaska Fairbanks"
+  ) |>
+ baretable()
+```
 
 ## Guest Lectures
 
@@ -345,18 +341,10 @@ lecs |>
 ```{r mentoring, results='asis'}
 undergrads <- tribble(
   ~ Start, ~ End, ~ Name, ~ Institution,
-  2024, 2025, "Trevor Davis", "University of Tennessee, Chattanooga",
-  2024, 2025, "Dylan Keisser", "University of Tennessee, Chattanooga",
-  2023, 2023, "Jonathan Martin", "University of Wisconsin-Madison",
-  2018, 2020, "Nathan Barrus", "University of Wyoming",
-  2019, 2020, "Russell Brubaker", "University of Wyoming",
-  2018, 2019, "Reilly Davis", "University of Wyoming",
-  2017, 2017, "Brynn Hirschman", "University of Wyoming",
-  2017, 2017, "Austin Jacobson", "University of Wyoming",
-  2016, 2016, "Shaun Helsper", "University of Wyoming",
-  2016, 2017, "Travis Allison", "University of Wyoming",
-  2016, 2016, "Andrew Annear", "University of Wyoming",
-  2015, 2015, "Jake Werner", "University of Wyoming",
+  2021, 2023, "Connor Johnson", "Purdue University",
+  2017, 2018, "Lindsey Dice", "Purdue University",
+  2016, 2017, "Monroe Morris", "University of Alaska Fairbanks",
+  2015, 2017, "Genevieve Johnson ", "University of Alaska Fairbanks"
   ) |>
   mutate(
     Start = as.character(Start),
@@ -370,13 +358,41 @@ undergrads <- tribble(
   ) |>
   select(Years, Name, Institution)
 
+
+postbacs <- tribble(
+  ~ Start, ~ End, ~ Name, ~ Institution,
+  2025, NA, "Amy Wang", "Cornell University (EEB Mentor Match)",
+  2019, 2020, "Julia Markovitz", "Purdue University",
+  ) |>
+  mutate(
+    Start = as.character(Start),
+    End = as.character(End),
+    End = tidyr::replace_na(End, "Present"),
+    Years = if_else(End == Start,
+      as.character(Start),
+      paste(Start, "--", End, sep = ""),
+      paste(Start, "--", End, sep = "")
+    )
+  ) |>
+  select(Years, Name, Institution)
 # undergrads |>
 #   baretable()
 ```
 
--   I have mentored `r nrow(undergrads)` undergraduate research assistants in lab and field settings
-    -   University of Wyoming, UW-Madison, University of Tennessee-Chattanooga
-    -   Several of these students have entered graduate programs or natural resource agencies
+**I have mentored `r nrow(postbacs)` post-baccalaureates and `r nrow(undergrads)` undergraduates in lab and field settings:**
+
+## Post-baccalaureate
+``` {r postbac-tables, results='asis'}
+postbacs |>
+  baretable()
+```
+
+## Undergraduates
+``` {r undergrad-tables, results='asis'}
+undergrads|>
+  baretable()
+```
+
 
 # Professional Service and Leadership
 
