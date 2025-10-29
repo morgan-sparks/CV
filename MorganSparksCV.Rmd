@@ -62,7 +62,7 @@ tribble(
 ```{r degrees, results='asis'}
 tribble(
   ~ Year, ~ Degree, ~ Feild, ~ Institution,
-  2023, "Ph.D.", "Biology", "Purude University",  
+  2023, "Ph.D.", "Biology", "Purdue University",  
   2016, "M.Sc.", "Fisheries", "University of Alaska Fairbanks", 
   2013, "B.S.", "Wildlife Biology (Aquatic) \\textit{High Honors}", "University of Montana",
   2013, "B.A.", "Journalism (Print) \\textit{High Honors}", "University of Montana"
@@ -83,35 +83,22 @@ n_talks <- RefManageR::ReadBib("bibs/conf_presentations.bib", check = FALSE) |>
   nrow()
 ```
 
-* **Research Interests**: Fisheries ecology and conservation; freshwater ecosystem responses to climate change and land use change; aquatic habitat connectivity; stable isotope ecology; ecological statistics and programming. 
-* Since 2014 I have authored `r n_pubs` papers in peer-reviewed journals on fisheries and conservation (pages \pageref{papersstart}--\pageref{papersend}).
-* On Google Scholar my h-index is `r bmm_cite$All[2]` with `r prettyNum(bmm_cite$All[1], big.mark=",")` total citations (as of `r format(Sys.time(), "%e %B %Y")`).
-* I have authored `r nrow(hatchR_cites)` R package with a total of `r hatchR_cites$citations` downloads (page \pageref{packagestart}).
-* I have contributed `r n_talks` papers and posters at AFS, SFS, ASLO, AGU, IAGLR, and regional chapter meetings (pages \pageref{presstart}--\pageref{presend}).
-
-\refstepcounter{bib}\label{papersstart}
-
 # Publications
 
-\* indicates shared first authorship. Underlined names indicate undergraduate research mentees.
+**I have authored `r n_pubs` papers in peer-reviewed journals. On Google Scholar my h-index is `r bmm_cite$All[2]` with `r prettyNum(bmm_cite$All[1], big.mark=",")` total citations (as of `r format(Sys.time(), "%e %B %Y")`).**
 
 ```{r articles}
 bibliography_entries("bibs/journal_articles.bib") |> 
   arrange(issued, desc(author$family))
 ```
 
-\refstepcounter{bib}\label{papersend}
-
 # R-packages
 
-\refstepcounter{bib}\label{packagestart}
+**hatchR has a total of `r hatchR_cites$citations` downloads.**
 
 ```{r software}
 bibliography_entries("bibs/pkgs.bib")
 ```
-
-\refstepcounter{bib}\label{packageend}
-
 
 # Theses
 
@@ -144,7 +131,7 @@ sumgrants <- grants |>
   sum(na.rm = TRUE)
 ```
 
-**I have acquired  *`r scales::dollar_format()(sumgrants)`* in research grants (showing grants >$5,000):** \vspace*{0.2cm}\enlargethispage*{0.5cm}
+**I have acquired *`r scales::dollar_format()(sumgrants)`* in research grants (showing grants \>\$5,000):** \vspace*{0.2cm}\enlargethispage*{0.5cm}
 
 ```{r grants-table, results='asis'}
 grants |>
@@ -202,9 +189,10 @@ grants |>
     )
   )
 ```
+
 \vspace*{0.2cm}\enlargethispage*{0.5cm}
 
-**Below are invited full proposals that were not awarded: \vspace*{0.2cm}\enlargethispage*{0.5cm}**
+**Below are invited full proposals that were not awarded:** \vspace*{0.2cm}\enlargethispage*{0.5cm}
 
 ```{r grantstable-invite, results='asis'}
 grants |>
@@ -233,7 +221,6 @@ grants |>
 ```
 
 \vspace*{0.2cm}\enlargethispage*{0.5cm}
-
 
 # Honors and Awards
 
@@ -278,6 +265,8 @@ tribble(
 
 # Invited Academic Talks
 
+I have contributed `r n_talks` papers and posters at AFS, SFS, ASLO, AGU, IAGLR, and regional chapter meetings (pages \pageref{presstart}--\pageref{presend}).
+
 ```{r talks, results='asis'}
 talks <- readr::read_csv("invited_talks.csv")
 
@@ -305,27 +294,25 @@ talks |>
 
 ## University of Wyoming
 
-* ZOO 4330: Ichthyology, Instructor of Record
-  * Spring 2020: 3 credits, 22 students
-
-* Zoo 4330: Ichthyology, Teaching Assistant, Lab Instructor
-  * Spring 2019: 3 credits, 20 students
-  * Spring 2018: 3 credits, 25 students
-  * Spring 2017: 3 credits, 19 students
-  * Spring 2016: 3 credits, 18 students
-
-* ZOO 4310: Fisheries Management, Teaching Assistant, Lab Instructor
-  * Fall 2019: 3 credits, 21 students
-  * Fall 2018: 3 credits, 26 students
-  * Fall 2017: 3 credits, 23 students
-  * Fall 2016: 3 credits, 19 students
-  * Fall 2015: 3 credits, 23 students
+-   ZOO 4330: Ichthyology, Instructor of Record
+    -   Spring 2020: 3 credits, 22 students
+-   Zoo 4330: Ichthyology, Teaching Assistant, Lab Instructor
+    -   Spring 2019: 3 credits, 20 students
+    -   Spring 2018: 3 credits, 25 students
+    -   Spring 2017: 3 credits, 19 students
+    -   Spring 2016: 3 credits, 18 students
+-   ZOO 4310: Fisheries Management, Teaching Assistant, Lab Instructor
+    -   Fall 2019: 3 credits, 21 students
+    -   Fall 2018: 3 credits, 26 students
+    -   Fall 2017: 3 credits, 23 students
+    -   Fall 2016: 3 credits, 19 students
+    -   Fall 2015: 3 credits, 23 students
 
 ## University of Alberta
 
-* RENR 376: Fisheries and Wildlife Management, Teaching Assistant, Lab Instructor
-  * Spring 2015: 3 credits, 27 students
-  * Spring 2014: 3 credits, 29 students
+-   RENR 376: Fisheries and Wildlife Management, Teaching Assistant, Lab Instructor
+    -   Spring 2015: 3 credits, 27 students
+    -   Spring 2014: 3 credits, 29 students
 
 ## Guest Lectures
 
@@ -351,7 +338,6 @@ lecs |>
     )
   )
 ```
-
 
 # Mentoring
 
@@ -387,10 +373,9 @@ undergrads <- tribble(
 #   baretable()
 ```
 
-* I have mentored `r nrow(undergrads)` undergraduate research assistants in lab and field settings
-  * University of Wyoming, UW-Madison, University of Tennessee-Chattanooga
-  * Several of these students have entered graduate programs or natural resource agencies
-
+-   I have mentored `r nrow(undergrads)` undergraduate research assistants in lab and field settings
+    -   University of Wyoming, UW-Madison, University of Tennessee-Chattanooga
+    -   Several of these students have entered graduate programs or natural resource agencies
 
 # Professional Service and Leadership
 
@@ -472,9 +457,9 @@ tribble(
 
 ## Reviewer
 
-* Proposal reviewer
-  * Lake Champlain Fisheries Research Program
-  * NSF, Division of Environmental Biology (DEB)
+-   Proposal reviewer
+    -   Lake Champlain Fisheries Research Program
+    -   NSF, Division of Environmental Biology (DEB)
 
 ```{r reviews1}
 n_reviewed <- 55
@@ -482,9 +467,9 @@ n_journals <- 18
 n_per_yr <- round(n_reviewed / (2025 - 2016), 1)
 ```
 
-* Manuscript reviewer: 
-  * Since 2016, I have reviewed `r n_reviewed` manuscripts from `r n_journals` journals ($\sim$ `r n_per_yr` per year). 
-  * Journals include: Fisheries Research, Oecologia, Global Change Biology, Ecological Applications, Ecosphere, Freshwater Biology, Freshwater Science, North American Journal of Fisheries Management, Frontiers in Ecology and Evolution, Aquatic Invasions, Hydrobiologia, Journal of Ecology, Environmental Biology of Fishes, Restoration Ecology, PeerJ, River Research and Applications, Journal of Great Lakes Research Diversity and Distributions, Transportation Research: Part D.
+-   Manuscript reviewer:
+    -   Since 2016, I have reviewed `r n_reviewed` manuscripts from `r n_journals` journals ($\sim$ `r n_per_yr` per year).
+    -   Journals include: Fisheries Research, Oecologia, Global Change Biology, Ecological Applications, Ecosphere, Freshwater Biology, Freshwater Science, North American Journal of Fisheries Management, Frontiers in Ecology and Evolution, Aquatic Invasions, Hydrobiologia, Journal of Ecology, Environmental Biology of Fishes, Restoration Ecology, PeerJ, River Research and Applications, Journal of Great Lakes Research Diversity and Distributions, Transportation Research: Part D.
 
 ## Leadership development
 
@@ -524,7 +509,6 @@ shops |>
   )
 ```
 
-
 ## Media and public talks
 
 ```{r media, results='asis'}
@@ -544,7 +528,6 @@ media |>
     )
   )
 ```
-
 
 ## Public service and outreach
 
@@ -585,7 +568,6 @@ bibliography_entries("bibs/conf_presentations.bib") |>
 ```
 
 \refstepcounter{bib}\label{presend}
-
 
 # Technical skills and training
 
@@ -674,4 +656,3 @@ tribble(
   ) |> 
   baretable()
 ```
-
