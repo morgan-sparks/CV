@@ -111,10 +111,10 @@ bibliography_entries("bibs/theses.bib") |>
 
 ```{r preprints}
 bibliography_entries("bibs/preprints.bib") |> 
-  arrange(issued, desc(author$family))
+  arrange(desc(author$family))
 ```
 
-# Unpublished working papers
+# Manuscripts in preparation
 
 ```{r unpublished}
 bibliography_entries("bibs/working.bib")
