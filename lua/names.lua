@@ -1,9 +1,6 @@
 -- List of mentee names to underline (full names as they appear in citations)
 local mentee_names = {
-    {last = "Barrus", first = "N.T."},
-    {last = "Keisser", first = "D."},
-    {last = "Davis", first = "T."},
-    {last = "Annear", first = "A.A."}
+    {last = "Dice", first = "L.M."}
 }
 
 function Block(el)
