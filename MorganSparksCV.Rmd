@@ -32,7 +32,7 @@ source(here::here("R/gcite.R"))
 # source(here::here("R/add_bib_section.R"))
 ```
 
-# Employment
+# Research Positions
 
 ```{r employment, results='asis'}
 tribble(
@@ -40,7 +40,7 @@ tribble(
   2024, NA, "\\textbf{Research Fish Biologist}, Rocky Mountain Research Station, USDA Forest Service",
   2023, 2024, "\\textbf{Postdoctoral Fellow}, National Science Foundation (Colorado State University)",
   2017, 2023, "\\textbf{Research Assistant}, Department of Biology, Purdue University",
-  2014, 2016, "\\textbf{Research Assistant}, USGS Alasko Cooperative Fish and Widlife Research Unit, University of Alaska Fairbanks"
+  2014, 2016, "\\textbf{Research Assistant}, USGS Alaska Cooperative Fish and Widlife Research Unit, University of Alaska Fairbanks"
   ) |>
   arrange(-Start) |>
   mutate(
@@ -152,7 +152,7 @@ grants |>
   arrange(desc(Time), desc(Amount)) |>
   select(Time, Entry, Amount) %>%  
   baretable(
-    align = "llp{13.3cm}r",  
+    align = "lp{1.6cm}p{13.3cm}r",  
     # hline.after = c(0, NROW(.)),
     size = "\\fontsize{10}{12}",
     add.to.row = list(
@@ -184,7 +184,7 @@ grants |>
   arrange(desc(Time), desc(Amount)) |>
   select(Time, Entry, Amount) %>%  
   baretable(
-    align = "llp{13.3cm}r",
+   align = "lp{1.6cm}p{13.3cm}r",
     # hline.after = c(0, NROW(.)),
     size = "\\fontsize{10}{12}",
     add.to.row = list(
@@ -216,7 +216,7 @@ grants |>
   arrange(desc(Time), desc(Amount)) |>
   select(Time, Entry, Amount) %>%  
   baretable(
-    align = "llp{13.3cm}r",
+    align = "lp{1.6cm}p{13.3cm}r",
     # hline.after = c(0, NROW(.)),
     size = "\\fontsize{10}{12}",
     add.to.row = list(
