@@ -418,7 +418,7 @@ tribble(
   2010, 2013, "President, University of Montana Student Chapter of the American Fisheries Society",
   2012, 2013, "Secretary, Westslope Chapter of Trout Unlimited",
   2016, 2017, "Science Advisor, Indiana Backcountry Hunters and Anglers",
-  2023, NA, "Ad hoc Advisor, Greenback Recovery Team",
+  2023, NA, "Ad hoc Advisor, Greenback Cutthroat Trout Recovery Team",
   2020, 2021, "Student Representative at Town Hall, Ecology and Evolutionary Biology, Purdue University"
   ) |>
   arrange(-Start) |>
