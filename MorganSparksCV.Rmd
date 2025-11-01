@@ -38,7 +38,7 @@ source(here::here("R/gcite.R"))
 tribble(
   ~Start, ~End, ~Position,
   2024, NA, "\\textbf{Research Fish Biologist}, Rocky Mountain Research Station, USDA Forest Service",
-  2023, 2024, "\\textbf{Postdoctoral Fellow}, National Science Foundation (Colorado State University)",
+  2023, 2024, "\\textbf{Postdoctoral Fellow}, National Science Foundation (\\textit{host} Colorado State University)",
   2017, 2023, "\\textbf{Research Assistant}, Department of Biology, Purdue University",
   2014, 2016, "\\textbf{Research Assistant}, USGS Alaska Cooperative Fish and Widlife Research Unit, University of Alaska Fairbanks"
   ) |>
@@ -87,6 +87,8 @@ n_talks <- RefManageR::ReadBib("bibs/conf_presentations.bib", check = FALSE) |>
 
 **I have authored `r n_pubs` papers in peer-reviewed journals. On Google Scholar my h-index is `r bmm_cite$All[2]` with `r prettyNum(bmm_cite$All[1], big.mark=",")` total citations (as of `r format(Sys.time(), "%e %B %Y")`).**
 
+\vspace*{0.2cm}
+
 ```{r articles}
 bibliography_entries("bibs/journal_articles.bib") |> 
   arrange(issued, desc(author$family))
@@ -95,6 +97,8 @@ bibliography_entries("bibs/journal_articles.bib") |>
 # R-packages
 
 **hatchR has a total of `r hatchR_cites$citations` downloads (as of `r format(Sys.time(), "%e %B %Y")`).**
+
+\vspace*{0.2cm}
 
 ```{r software}
 bibliography_entries("bibs/pkgs.bib")
@@ -278,7 +282,7 @@ talks <- readr::read_csv("invited_talks.csv")
 
 talks |>
   mutate(
-    Time = paste0(Year, "--", Month),
+    Time = paste0(Year),
     Entry = paste(
       "``", Title, "''. ",
       Place, ".",
@@ -318,7 +322,7 @@ lecs <- readr::read_csv("guest_lecs.csv")
 
 lecs |>
   mutate(
-    Time = paste0(Year, "--", Month),
+    Time = paste0(Year),
     Entry = paste(
       "``", Title, "''. ",
       Place, ".",
