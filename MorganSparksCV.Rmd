@@ -273,7 +273,7 @@ tribble(
   baretable()
 ```
 
-# Invited Academic Talks
+# Invited Talks
 
 <!-- I have contributed `r n_talks` papers and posters at AFS, SFS, ASLO, AGU, IAGLR, and regional chapter meetings (pages \pageref{presstart}--\pageref{presend}). -->
 
@@ -305,12 +305,12 @@ talks |>
 ## Teaching Assistantships
 ```{r teaching, results='asis'}
  tribble(
-  ~ Year, ~ Course, ~ Role, ~ Credits, ~ Institution,
-  2023, "BIOL 69500: Data Science for Biologists", "TA",  "3 credits", "Purdue University",
-  2022, "BIOL 5800: Evolution", "TA", "3 credits","Purdue University",
-  2019, "BIOL 19500: CURE Disease Ecology Lab", "TA", "5 credits","Purdue University",
-  2018, "BIOL 58210: Ecological Statistics ", "TA", "3 credits", "Purdue University",
-  2015, "FISH 427: Ichthyology", "TA",  "5 credits", "University of Alaska Fairbanks"
+  ~ Year, ~ Course, ~ Credits, ~ Institution,
+  2023, "BIOL 69500: Data Science for Biologists",  "3 credits", "Purdue University",
+  2022, "BIOL 5800: Evolution", "3 credits","Purdue University",
+  2019, "BIOL 19500: CURE Disease Ecology Lab", "5 credits","Purdue University",
+  2018, "BIOL 58210: Ecological Statistics ", "3 credits", "Purdue University",
+  2015, "FISH 427: Ichthyology",  "5 credits", "University of Alaska Fairbanks"
   ) |>
  baretable()
 ```
@@ -397,7 +397,7 @@ undergrads|>
   baretable()
 ```
 
-
+\newpage
 # Professional Service and Leadership
 
 <!-- ## Adjunct and affiliate appointments -->
@@ -460,15 +460,25 @@ tribble(
   baretable()
 ```
 
-## Society service
+## Session Organization
 
 ```{r conf-service, results='asis'}
-tribble(
-  ~Year, ~Details,
-  2026, "Session chair, Fire and Fish, American Fisheries Society National Meeting",
-  2024, "Session co-chair, Science to Restore and Manage Wildland Aquatic Habitats and Watersheds, American Geophysical Union"
-  ) |>
-  baretable()
+sessions <- tribble(
+  ~Year, ~Meeting,
+  2026, "Chair, Fire and Fish: 25 years of progress and challenges, American Fisheries Society National",
+  2026, "Co-chair, Perspectives on the Cutthroat Trout species complex in the genomics era, Western Division American Fisheries Society",
+  2024, "Co-chair, Science to Restore and Manage Wildland Aquatic Habitats and Watersheds, American Geophysical Union"
+  )
+
+sessions %>% 
+  baretable(
+    align = "llp{13cm}",
+    size = "\\fontsize{10}{12}",
+    add.to.row = list(
+      pos = as.list(seq(NROW(.))),
+      command = rep("\\\\[-0.32cm]", NROW(.))
+    )
+  )
 ```
 
 ## Reviewer
