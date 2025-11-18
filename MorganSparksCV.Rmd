@@ -111,14 +111,14 @@ bibliography_entries("bibs/theses.bib") |>
   arrange(issued, desc(author$family))
 ```
 
-# Pre-prints and in-review
+# Pre-prints and In Review
 
 ```{r preprints}
 bibliography_entries("bibs/preprints.bib") |> 
   arrange(desc(author$family))
 ```
 
-# Manuscripts in preparation
+# Manuscripts In Preparation
 
 ```{r unpublished}
 bibliography_entries("bibs/working.bib")
@@ -234,7 +234,7 @@ grants |>
 
 # Honors and Awards
 
-## Professional awards
+## Professional Awards
 
 ```{r award1, results='asis'}
 tribble(
@@ -436,7 +436,7 @@ tribble(
   baretable()
 ```
 
-## Society memberships
+## Society Memberships
 
 ```{r societies, results='asis'}
 tribble(
@@ -483,19 +483,19 @@ sessions %>%
 
 ## Reviewer
 
-### Grant review:
+### Grant Review:
 
 *Great Lakes Fisheries Commission*
 
 
-### Scientific journal review:
+### Scientific Journal Review:
 
 *North American Journal of Fisheries Managament, Conservation Science and Practice, Molecular Ecology Resources, Journal of Applied Ichthyology, Conservation Physiology, Heredity, Evolutionary Applications, PLoS ONE, Canadian Journal of Aquatic and Fisheries Science, Transactions of the American Fisheries Society*
 
 
 # Outreach and Broader Impacts
 
-## Media and public talks
+## Media and Public Talks
 
 ```{r media, results='asis'}
 media <- readr::read_csv("media.csv")
@@ -515,7 +515,7 @@ media |>
   )
 ```
 
-## Public service and outreach
+## Public Service and Outreach
 
 ```{r outreach, results='asis'}
 tribble(
