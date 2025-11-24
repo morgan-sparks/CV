@@ -118,7 +118,7 @@ bibliography_entries("bibs/preprints.bib") |>
   arrange(desc(author$family))
 ```
 
-# Manuscripts In Preparation
+# Manuscripts in Preparation
 
 ```{r unpublished}
 bibliography_entries("bibs/working.bib")
