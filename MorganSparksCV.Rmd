@@ -249,6 +249,7 @@ tribble(
 ```{r award2, results='asis'}
 tribble(
   ~Year, ~Award, ~Support,
+  2023, "SoGES Sustainability Leadership Fellowship, Colorado State University", "",
   2022, "Bisland Dissertation Fellowship, Purdue University", "One semester full support",
   2021, "Waser Fellowship, Purdue University Department of Biological Sciences", "6 months full support",
   2020, "Purdue Research Foundation Graduate Fellowship", "One year full support",
