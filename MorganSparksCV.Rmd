@@ -581,15 +581,17 @@ bibliography_entries("bibs/conf_presentations.bib") |>
 
 # References
 
-**Dr. Bryan Maitland, Research Fish Biologist**
+**Dr. Chris Cheek, Assistant Professor**
 
-Rocky Mountain Research Station, US Forest Service
+Department of Natural Resource Management, South Dakota State University
 
-Address: 322 E. Front St, Boise, ID 83702
+Address: McFadden Biostress Laboratory 139B, Natural Resource
+Management-Box 2140B University Station Brookings, SD 57007
 
-Phone: 917-838-0174
+Phone: 405-850-7362
 
-Email: [bmaitland101\@gmail.com](mailto:bmaitland101@gmail.com){.email}
+Email:
+[Christopher.Cheek\@sdstate.edu](mailto:Christopher.Cheek@sdstate.edu){.email}
 
 \
 
