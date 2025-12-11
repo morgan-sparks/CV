@@ -12,6 +12,9 @@ output:
     pandoc_args: ["--lua-filter=lua/names.lua"]
 header-includes:
   \definecolor{headcolor}{HTML}{005838}
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 \newcounter{bib}
@@ -85,7 +88,10 @@ n_talks <- RefManageR::ReadBib("bibs/conf_presentations.bib", check = FALSE) |>
 
 # Publications
 
-**I have authored `r n_pubs` papers in peer-reviewed journals. On Google Scholar my h-index is `r bmm_cite$All[2]` with `r prettyNum(bmm_cite$All[1], big.mark=",")` total citations (as of `r format(Sys.time(), "%e %B %Y")`).**
+**I have authored `r n_pubs` papers in peer-reviewed journals. On Google
+Scholar my h-index is `r bmm_cite$All[2]` with
+`r prettyNum(bmm_cite$All[1], big.mark=",")` total citations (as of
+`r format(Sys.time(), "%e %B %Y")`).**
 
 \vspace*{0.2cm}
 
@@ -96,7 +102,8 @@ bibliography_entries("bibs/journal_articles.bib") |>
 
 # R-packages
 
-**hatchR has a total of `r hatchR_cites$citations` downloads (as of `r format(Sys.time(), "%e %B %Y")`).**
+**hatchR has a total of `r hatchR_cites$citations` downloads (as of
+`r format(Sys.time(), "%e %B %Y")`).**
 
 \vspace*{0.2cm}
 
@@ -168,7 +175,7 @@ grants |>
 
 <!-- \vspace\*{0.2cm}\\enlargethispage\*{0.5cm} -->
 
-### Below are invited full proposals that were invited but withdrawn due to federal funding issues: 
+### Below are invited full proposals that were invited but withdrawn due to federal funding issues:
 
 <!-- \vspace\*{0.2cm}\\enlargethispage\*{0.5cm} -->
 
@@ -304,6 +311,7 @@ talks |>
 # Teaching
 
 ## Teaching Assistantships
+
 ```{r teaching, results='asis'}
  tribble(
   ~ Year, ~ Course, ~ Credits, ~ Institution,
@@ -387,18 +395,21 @@ postbacs <- tribble(
 ### I have mentored `r nrow(postbacs)` post-baccalaureates and `r nrow(undergrads)` undergraduates in lab and field settings:
 
 ## Post-baccalaureate
-``` {r postbac-tables, results='asis'}
+
+```{r postbac-tables, results='asis'}
 postbacs |>
   baretable()
 ```
 
 ## Undergraduates
-``` {r undergrad-tables, results='asis'}
+
+```{r undergrad-tables, results='asis'}
 undergrads|>
   baretable()
 ```
 
 \newpage
+
 # Professional Service and Leadership
 
 <!-- ## Adjunct and affiliate appointments -->
@@ -488,11 +499,13 @@ sessions %>%
 
 *Great Lakes Fisheries Commission*
 
-
 ### Scientific Journal Review:
 
-*North American Journal of Fisheries Managament, Conservation Science and Practice, Molecular Ecology Resources, Journal of Applied Ichthyology, Conservation Physiology, Heredity, Evolutionary Applications, PLoS ONE, Canadian Journal of Aquatic and Fisheries Science, Transactions of the American Fisheries Society*
-
+*North American Journal of Fisheries Managament, Conservation Science
+and Practice, Molecular Ecology Resources, Journal of Applied
+Ichthyology, Conservation Physiology, Heredity, Evolutionary
+Applications, PLoS ONE, Canadian Journal of Aquatic and Fisheries
+Science, Transactions of the American Fisheries Society*
 
 # Outreach and Broader Impacts
 
@@ -555,6 +568,7 @@ bibliography_entries("bibs/conf_presentations.bib") |>
 ```
 
 ## Posters
+
 ```{r poster-offered}
 bibliography_entries("bibs/conf_presentations.bib") |> 
   filter(genre == "Poster") |> 
@@ -562,3 +576,44 @@ bibliography_entries("bibs/conf_presentations.bib") |>
 
 
 ```
+
+\newpage
+
+# References
+
+**Dr. Bryan Maitland, Research Fish Biologist**
+
+Rocky Mountain Research Station, US Forest Service
+
+Address: 322 E. Front St, Boise, ID 83702
+
+Phone: 917-838-0174
+
+Email: [bmaitland101\@gmail.com](mailto:bmaitland101@gmail.com){.email}
+
+\
+
+**Dr. Frank McCormick, Program Manager and Special Science Adviser**
+
+Rocky Mountain Research Station, US Forest Service
+
+Address: 240 W Prospect Road Fort Collins, CO, USA 80526
+
+Phone: 208-866-9618
+
+Email:
+[frank.h.mccormick\@usda.gov](mailto:frank.h.mccormick@usda.gov){.email}
+
+\
+
+**Dr. W. Chris Funk, Professor**
+
+Department of Biology, Colorado State University
+
+Address: Biology Building, Room 111, 1878 Campus Delivery, Fort Collins,
+CO, USA 80523-1878
+
+Phone: 970-491-3289
+
+Email:
+[Chris.Funk\@colostate.edu](mailto:Chris.Funk@colostate.edu){.email}
