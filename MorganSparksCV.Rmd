@@ -577,6 +577,8 @@ bibliography_entries("bibs/conf_presentations.bib") |>
 
 ```
 
+<!--
+
 \newpage
 
 # References
@@ -619,3 +621,5 @@ Phone: 970-491-3289
 
 Email:
 [Chris.Funk\@colostate.edu](mailto:Chris.Funk@colostate.edu){.email}
+
+-->
