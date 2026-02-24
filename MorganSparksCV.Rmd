@@ -246,6 +246,7 @@ grants |>
 ```{r award1, results='asis'}
 tribble(
   ~Year, ~Award,
+  2025, "Outstanding Service Award, U.S. Forest Service, Rocky Mountain Research Station",
   2024, "Outstanding Service Award, U.S. Forest Service, Rocky Mountain Research Station",
   ) |>
   baretable()
@@ -501,7 +502,7 @@ sessions %>%
 
 ### Scientific Journal Review:
 
-*North American Journal of Fisheries Managament, Conservation Science
+*North American Journal of Fisheries Management, Conservation Science
 and Practice, Molecular Ecology Resources, Journal of Applied
 Ichthyology, Conservation Physiology, Heredity, Evolutionary
 Applications, PLoS ONE, Canadian Journal of Aquatic and Fisheries
@@ -577,6 +578,7 @@ bibliography_entries("bibs/conf_presentations.bib") |>
 
 ```
 
+```{=html}
 <!--
 
 \newpage
@@ -623,3 +625,4 @@ Email:
 [Chris.Funk\@colostate.edu](mailto:Chris.Funk@colostate.edu){.email}
 
 -->
+```
