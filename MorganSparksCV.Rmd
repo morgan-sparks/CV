@@ -93,8 +93,6 @@ Scholar my h-index is `r bmm_cite$All[2]` with
 `r prettyNum(bmm_cite$All[1], big.mark=",")` total citations (as of
 `r format(Sys.time(), "%e %B %Y")`).**
 
-\vspace*{0.2cm}
-
 ```{r articles}
 bibliography_entries("bibs/journal_articles.bib") |> 
   arrange(issued, desc(author$family))
@@ -104,8 +102,6 @@ bibliography_entries("bibs/journal_articles.bib") |>
 
 **hatchR has a total of `r hatchR_cites$citations` downloads (as of
 `r format(Sys.time(), "%e %B %Y")`).**
-
-\vspace*{0.2cm}
 
 ```{r software}
 bibliography_entries("bibs/pkgs.bib")
@@ -246,6 +242,7 @@ grants |>
 ```{r award1, results='asis'}
 tribble(
   ~Year, ~Award,
+  2026, "Chief's Recognition (Group Award),  U.S. Forest Service, Rocky Mountain Research Station",
   2026, "Early Career Scientist Award, U.S. Forest Service, Rocky Mountain Research Station",
   2025, "Outstanding Service Award, U.S. Forest Service, Rocky Mountain Research Station",
   2024, "Outstanding Service Award, U.S. Forest Service, Rocky Mountain Research Station",
@@ -480,7 +477,7 @@ tribble(
 sessions <- tribble(
   ~Year, ~Meeting,
   2026, "Chair, Fire and Fish: 25 years of progress and challenges, American Fisheries Society National",
-  2026, "Co-chair, Perspectives on the Cutthroat Trout species complex in the genomics era, Western Division American Fisheries Society",
+  2026, "Chair, Perspectives on the Cutthroat Trout species complex in the genomics era, Western Division American Fisheries Society",
   2024, "Co-chair, Science to Restore and Manage Wildland Aquatic Habitats and Watersheds, American Geophysical Union"
   )
 
