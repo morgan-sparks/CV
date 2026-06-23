@@ -407,11 +407,9 @@ undergrads|>
   baretable()
 ```
 
-\newpage
-
 # Professional Service and Leadership
 
-<!-- ## Adjunct and affiliate appointments -->
+## Adjunct and affiliate appointments
 
 <!-- ## Graduate student committees -->
 
