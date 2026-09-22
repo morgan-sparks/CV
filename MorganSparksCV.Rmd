@@ -121,11 +121,15 @@ bibliography_entries("bibs/preprints.bib") |>
   arrange(desc(author$family))
 ```
 
+<!--
+
 # Manuscripts in Preparation
 
 ```{r unpublished}
 bibliography_entries("bibs/working.bib")
 ```
+
+-->
 
 # Grants
 
@@ -574,6 +578,8 @@ bibliography_entries("bibs/conf_presentations.bib") |>
 
 ```
 
+<!--
+
 \newpage
 
 # References
@@ -615,3 +621,5 @@ Phone: 970-491-3289
 
 Email:
 [Chris.Funk\@colostate.edu](mailto:Chris.Funk@colostate.edu){.email}
+
+-->
